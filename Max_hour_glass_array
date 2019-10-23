@@ -1,0 +1,44 @@
+# https://www.hackerrank.com/challenges/2d-array/problem/
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the hourglassSum function below.
+def hourglassSum(arr):
+    start_row=start_col=0
+    hg=[]
+    add=0
+
+    while(start_row<4):
+        start_col=0
+        while(start_col<4):
+            add=0
+            for i in range(start_row,3+start_row):
+                for j in range(start_col,3+start_col):
+                    if (i==start_row+1 and j==start_col) or (i==start_row+1 and j==start_col+2):
+                        continue
+                    else:
+                        add=add+arr[i][j]
+    #        print(add)
+            hg.append(add)
+            start_col=start_col+1
+        start_row=start_row+1
+
+    return (max(hg))
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    arr = []
+
+    for _ in range(6):
+        arr.append(list(map(int, input().rstrip().split())))
+
+    result = hourglassSum(arr)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
