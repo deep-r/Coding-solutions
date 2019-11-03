@@ -43,4 +43,12 @@ SELECT NAME FROM EMPLOYEE ORDER BY NAME ASC
 
 #https://www.hackerrank.com/challenges/revising-aggregations-the-average-function/problem
 #Query the average population of all cities in CITY where District is California.
+
 SELECT AVG(population) from CITY WHERE DISTRICT = "CALIFORNIA"
+
+
+#https://www.hackerrank.com/challenges/average-population/problem
+#Query the average population for all cities in CITY, rounded down to the nearest integer.
+
+SELECT FLOOR(AVG(POPULATION)) FROM CITY 
+
