@@ -39,3 +39,8 @@ SELECT COUNT(ID) FROM CITY WHERE POPULATION>100000
 #Write a query that prints a list of employee names (i.e.: the name attribute) from the Employee table in alphabetical order.
 
 SELECT NAME FROM EMPLOYEE ORDER BY NAME ASC
+
+
+#https://www.hackerrank.com/challenges/revising-aggregations-the-average-function/problem
+#Query the average population of all cities in CITY where District is California.
+SELECT AVG(population) from CITY WHERE DISTRICT = "CALIFORNIA"
