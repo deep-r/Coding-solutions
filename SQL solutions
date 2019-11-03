@@ -22,3 +22,10 @@ CASE WHEN A+B>C AND A+C>B AND B+C>A THEN
          END
 ELSE 'Not A Triangle' END
 FROM TRIANGLES
+
+
+#https://www.hackerrank.com/challenges/salary-of-employees/problem
+#Write a query that prints a list of employee names (i.e.: the name attribute) for employees in Employee having a salary greater than 2000 per month who have been employees for less than 10 months.
+#Sort your result by ascending employee_id.
+
+SELECT NAME FROM EMPLOYEE WHERE SALARY > 2000 AND MONTHS < 10 ORDER BY employee_id
